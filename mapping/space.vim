@@ -42,7 +42,7 @@ function! SpaceVim#mapping#space#init() abort
   call SpaceVim#custom#SPC('nnoremap', ['[SPC]'], 'call SpaceVim#welcome()', 'Startify', 1)
  
 "▽2023/12/11 メモリ解放CMDを起動するキーマッピングを追加
-  call SpaceVim#custom#SPC('nnoremap', ['k'], '!start C:\Users\y-nishiguchi\sys\02_Utilitytool\メモリ解放.bat', 'MemoryRelease', 1)
+  call SpaceVim#custom#SPC('nnoremap', ['R'], '!start C:\Users\y-nishiguchi\sys\02_Utilitytool\メモリ解放.bat', 'MemoryRelease', 1)
 
   nnoremap <silent><nowait> [SPC] :<c-u>LeaderGuide ' '<CR>
   vnoremap <silent><nowait> [SPC] :<c-u>LeaderGuideVisual ' '<CR>
