@@ -1,0 +1,112 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2023 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # カラースキーム, https://spacevim.org/layers/colorscheme/ (default: 'gruvbox')
+    colorscheme = "hybrid"
+    # backgroundのカラースキーム
+    colorscheme_bg = "dark"
+    # SpaceVim-options-enable_guicolors
+    # GUIカラーを有効化するか(tmux上でやりたい場合はtmux側も設定が必要)(default: false)
+    # ~/.tmux.conf
+    # set -g default-terminal "screen-256color"
+    # set-option -ga terminal-overrides ",xterm-256color:Tc"
+    # 更に端末(ターミナル)側でも256色をサポートしている必要がある(端末256 => tmux256 => Vim256)    
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    # SpaceVimのバッファの番号(index)のタイプ
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = true
+    # Vimのステータスラインにモード名を載せるか(NORMALやINSERT等)
+    enable_statusline_mode = true
+    statusline_unicode = true
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    # カーソル位置から行番号を相対的にカウント(default: true) 
+    relativenumber = false
+    # フォント(default: Empty)
+    guifont = "SauceCodePro Nerd Font Mono:h12"
+    # vimホームで表示するファイルの数(default: 6) 
+    home_files_number = 6
+
+# ----------Enable layer----------
+[[layers]]
+  name = 'colorscheme'
+
+[[layers]]
+  name = 'ui'
+  enable_cursorword = true
+  cursorword_delay = 50
+
+[[layers]]
+  name = 'japanese'
+
+[[layers]]
+  name = 'lsp'
+
+[[layers]]
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 30
+
+[[layers]]
+  name = 'ssh'
+  ssh_user = 'ar_user2'
+  ssh_address = '192.168.1.30'
+  ssh_port = '22'
+
+[[layers]]
+  name = 'git'
+  git_plugin = 'fugitive'
+
+[[layers]]
+  name = 'github'
+
+[[layers]]
+  name = 'fzf'
+
+[[layers]]
+  name = 'tools'
+
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = 'complete'
+  auto_completion_tab_key_behavior = 'smart'
+
+[[layers]]
+  name = 'lang#html'
+
+[[layers]]
+  name = 'lang#javascript'
+  auto_fix = true
+  enable_flow_syntax = true
+  format_on_save = true
+
+[[layers]]
+  name = 'lang#php'
+
+[[layers]]
+  name = 'lang#python'
+
+# ----------Enable plugins----------
+[[custom_plugins]]
+  name = 'mattn/webapi-vim'
+
+[[custom_plugins]]
+  name = 'ryanoasis/vim-devicons'
+
+[[custom_plugins]]
+  name = 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+[[custom_plugins]]
+  name = 'nathanaelkane/vim-indent-guides'
