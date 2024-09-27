@@ -14,7 +14,7 @@ WindowsもMacもGUIを利用する。WindowsはGVim、MacはMacVim。（Vim本�
 - Windows: [GVim](https://www.vim.org/download.php#pc)
 - Mac: [MacVim](https://macvim.org/)
 
-## 起動と終了
+### 起動と終了
 
 Windowsなら `gvim.exe` 、Macなら `MacVim.app` で起動。
 
@@ -31,12 +31,12 @@ Windowsなら `gvim.exe` 、Macなら `MacVim.app` で起動。
 
 それぞれ "vimrc" が最初に読み込まれ、 "gvimrc" はGUI（アプリ単独）で起動した場合その次に読み込まれます。
 
-::: warn
-SpaceVimをインストールする場合、SpaceVimのディレクトリで設定ファイルを構築するので
-Vimのインストールディレクトリにあるvimrc、gvimrcは削除する。
-:::
+> [!WARNING]
+> SpaceVimをインストールする場合、SpaceVimのディレクトリで設定ファイルを構築するので
+> Vimのインストールディレクトリにあるvimrc、gvimrcは削除する。
 
-## 設定ファイルの書き方
+
+### 設定ファイルの書き方
 
 コマンドモードでできることを、 `:` を飛ばして書けば動きます。
 
@@ -67,7 +67,7 @@ source ~/dotfiles/.vimrc
 
 例示される設定では、三つのプラグインが読み込まれるようになっています。不要なら削除してしまっても構いません。
 
-## 自動インストール
+### 自動インストール
 
 簡単にインストールは済ませたいので、末尾の方にある "If you want to install" あたりをコメント解除してください。行頭の二重引用符 `"` を削除します。また削除も自動でやってもらうよう一行追加します。
 
@@ -83,7 +83,7 @@ call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 これで `dein#add()` を書いたり消したりするだけでよくなりました。（次項参照。）　これらを設定しない場合は、変更時に自分でインストール、削除を行う処理を呼ぶ必要があります。
 
-## プラグインの追加と削除
+### プラグインの追加と削除
 
 前項の自動化を前提とします。
 
@@ -150,7 +150,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 他にもたくさんあるのでヘルプを参照。ヘルプの参照の仕方は別稿。
 
-## ウィンドウ、タブ
+### ウィンドウ、タブ
 
 複数のファイルを編集する場合は（Vim内部の）ウィンドウやタブを使うと便利です。
 
@@ -158,7 +158,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 # インストールのトラブルシュート
 
-## Vimが見つからない（Windows）
+### Vimが見つからない（Windows）
 
 ```console
 > vim
@@ -196,7 +196,7 @@ Vimはいくつかの「モード」を切り替えて使用します。
 
 諸々見ていく前に、見方を示します。
 
-## 一般
+### 一般
 
 - `x` ... Xキーのみ
 - `X` ... Shift + X
@@ -210,7 +210,7 @@ CtrlキーとShiftキーを使います。Macのcommandキーは使いません�
 
 Alt/optionキーも使えるようですが、あんまり使わない気がします。環境依存だから？　（未調査）
 
-## 特殊キー
+### 特殊キー
 
 - `<CR>` ... Return (Carriage Return)
 - `<Tab>` ... Tab
@@ -222,7 +222,7 @@ Alt/optionキーも使えるようですが、あんまり使わない気がし�
 
 `:help keycodes` にもっとたくさん載ってます。
 
-## エスケープ
+### エスケープ
 
 `\` でエスケープします。
 
@@ -236,7 +236,7 @@ inoremap <C-h> \<Home>  " Ctrl + Hで "<Home>" と入力
 
 `inoremap` については後述。
 
-## コメント
+### コメント
 
 二重引用符 `"` がコメントになります。
 
@@ -265,13 +265,13 @@ set autoindent
 - 直後の操作を32回繰り返す `32a-<Esc>`
 - 直前の編集をもう一度繰り返す `.`
 
-## 編集履歴
+### 編集履歴
 
 `u` と `<C-r>` で行ったり来たりします。
 
 Vimの環境によっては履歴がひとつしか残っていないタイプ（ `u` 連打で行ったり来たりになるやつ）もあります。
 
-## 操作の前に数字を入力すると、その回数繰り返す
+### 操作の前に数字を入力すると、その回数繰り返す
 
 例えば `yy` の後に `p` で行を複製することができますが、これを `3p` とすると、三回貼り付けることができます。
 
@@ -289,7 +289,7 @@ hello
 hello
 ```
 
-## `.` で直前の操作を繰り返し
+### `.` で直前の操作を繰り返し
 
 `.` 最強です。まじつよい。まじつよ。さいつよ。
 
@@ -313,7 +313,7 @@ hello
 
 補完はプラグインなしでも、どこかで使われている単語であれば補完できます。
 
-## `c` の組み合わせ
+### `c` の組み合わせ
 
 `c` の次に移動の操作ひとつを組み合わせて、その範囲を削除しつつ挿入モードへ入ることができます。
 
@@ -359,7 +359,7 @@ hello
 
 Vimを一度起動すれば、そのなかで複数のファイルを編集したり、あるいは同じファイルの複数個所を並べて眺めたりすることができます。
 
-## ウィンドウ
+### ウィンドウ
 
 Vimでは画面を分割して複数の作業を並行して行うことができます。この分割した画面のことを「ウィンドウ」と呼びます。これはGUIのウィンドウとは別の用語です。
 
@@ -371,7 +371,7 @@ Vimでは画面を分割して複数の作業を並行して行うことがで�
 
 ウィンドウはタブ（次項）の内側に存在する的な感じです。
 
-## タブ
+### タブ
 
 タブはコマンドモードから増やします。
 
@@ -407,7 +407,7 @@ nnoremap <C-S-Tab> :tabprevious<CR>
 nnoremap <C-W>t :tabnew<CR>
 ```
 
-## 矢印キーを無効化
+### 矢印キーを無効化
 
 ノーマルモードで矢印キーを押しても何も起こらないようになります。スパルタ！
 
@@ -418,7 +418,7 @@ nnoremap <Up> <Nul>
 nnoremap <Right> <Nul>
 ```
 
-## Ctrl+Sで保存
+### Ctrl+Sで保存
 
 ```vim
 nnoremap <C-s> :w<CR>
@@ -452,7 +452,7 @@ Vimの初期操作も探すことができます。あら便利。
 
 # 推薦図書
 
-## 実践Vim
+### 実践Vim
 
 - [実践Vim　思考のスピードで編集しよう！ (アスキー書籍) | Ｄｒｅｗ Ｎｅｉｌ, 新丈 径 | 工学 | Kindleストア | Amazon](https://www.amazon.co.jp/dp/B00HWLJI3U/)
 
@@ -460,7 +460,7 @@ Vimの初期操作も探すことができます。あら便利。
 
 紙の本とKindle版があります。Kindle版は固定レイアウトではないので、スマホでも読むことができます。（実践できないけど。）
 
-## Learn Vimscript the Hard Way
+### Learn Vimscript the Hard Way
 
 - [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
 
@@ -472,29 +472,29 @@ PDFやepub、紙の本も販売中。オンラインで読む分には無料。
 
 # おすすめプラグイン
 
-## イケてるステータスバーを表示
+### イケてるステータスバーを表示
 
 - [itchyny/lightline.vim: A light and configurable statusline/tabline plugin for Vim](https://github.com/itchyny/lightline.vim)
 
 現在のモードやファイル名、エンコード等の情報を表示します。きれい。
 
-## インデントレベルをわかりやすく表示
+### インデントレベルをわかりやすく表示
 
 - [nathanaelkane/vim-indent-guides: A Vim plugin for visually displaying indent levels in code](https://github.com/nathanaelkane/vim-indent-guides)
 
-## 画面内の好きなところへ一瞬で移動
+### 画面内の好きなところへ一瞬で移動
 
 - [easymotion/vim-easymotion: Vim motions on speed!](https://github.com/easymotion/vim-easymotion)
 
 READMEのGif動画を見てください。ジャンプします。
 
-## パスや名前で絞り込んでファイル読み込み
+### パスや名前で絞り込んでファイル読み込み
 
 - [ctrlpvim/ctrlp.vim: Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder.](https://github.com/ctrlpvim/ctrlp.vim)
 
 NERDTreeと違ってファイル名が分かっている場合、こちらの方が選択が早いです。
 
-## HTMLやCSSの入力支援
+### HTMLやCSSの入力支援
 
 - [mattn/emmet-vim: emmet for vim: http://emmet.io/](https://github.com/mattn/emmet-vim)
 
