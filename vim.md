@@ -2,50 +2,39 @@
 
 - [インストール](#インストール)
 - [設定ファイル](#設定ファイル)
-- [プラグインマネージャの用意](#プラグインマネージャの用意)
-- [ファイラの用意](#ファイラの用意)
+- [SpaceVimのインストール](#SpaceVimのインストール)
+- [ファイラの設定](#ファイラの設定)
 
 # インストール
 
-主に4種類あって、
+WindowsとMacの環境でそれぞれインストールするファイルが違う。
 
-- GUIのVim
-- CLIのVim
+- WindowsのVim
+- MacのVim
 - NeoVim
 - IDEのプラグインとしてのVim
 
-GUIはGVim、MacVimという名前です。Vim本体とは別に開発されています。日本語環境も揃うKaoriya版を入れるのが安定。
+WindowsもMacもGUIを利用する。WindowsはGVim、MacはMacVim。（Vim本体とは別）
 
-- Windows: [Vim — KaoriYa](https://www.kaoriya.net/software/vim/)
-- Mac: [splhack/macvim-kaoriya: MacVim-KaoriYa](https://github.com/splhack/macvim-kaoriya)
-	- →[リリースページ](https://github.com/splhack/macvim-kaoriya/releases/tag/20171020)からダウンロード
-
-Macには最初からCLIのVimが入っています。Windowsにはないが[WSL](https://msdn.microsoft.com/en-us/commandline/wsl/faq)やGit Bash等には最初から入ってる感じがします。
-
-NeoVimはVimを現代風に書き直そうみたいな運動から出てきたもの(要出展)です。割と最近良い感じのようなので、そちらでも構いません。GUIはまた別途ある。今回は話しません。
-
-例えばJetBrain系のIDE（Android Studioとか）には[IdeaVim](https://plugins.jetbrains.com/plugin/164-ideavim)というのがあります。MSVSにも何かあったな、何だっけ。
+- Windows: [GVim](https://www.vim.org/download.php#pc)
+- Mac: [MacVim](https://macvim.org/)
 
 ## 起動と終了
 
-GUIは、Windowsなら `gvim.exe` 、Macなら `MacVim.app` を起動します。
+Windowsなら `gvim.exe` 、Macなら `MacVim.app` で起動。
 
-CLIで試す場合は `gvim` ではなく `vim` で起動します。（パスはうまいこと設定しておいてください。）
 
-```console
-$ vim
-```
 
-起動後、 `:q` と入力すると終了します。何か文句言われたら `Esc` 連打の後に `:qa!` してください。
+終了は、 `:q` と入力すると終了。何か文句言われたら `Esc` 連打の後に `:qa!` で強制終了。
 
 # 設定ファイル
 
-以下のファイルが最初に読み込まれます。ここにいろいろ設定を書き込みます。
+以下のファイルが最初に読み込まれる。ここにいろいろ設定を書き込みする。
 
 - Windows: `%HOME%/_vimrc`, `%HOME%/_gvimrc`
 - Mac: `~/.vimrc`, `~/.gvimrc`
 
-それぞれ "vimrc" は最初に、 "gvimrc" はGUI（アプリ単独）で起動した場合その次に読み込まれます。
+それぞれ "vimrc" が最初に読み込まれ、 "gvimrc" はGUI（アプリ単独）で起動した場合その次に読み込まれます。
 
 ## 設定ファイルの書き方
 
@@ -65,7 +54,7 @@ set number
 source ~/dotfiles/.vimrc
 ```
 
-# プラグインマネージャの用意
+# SpaceVimのインストール
 
 今後拡張していくことになると思いますが、まずは管理ツールを入れるとこの先がスムーズでしょう。
 
@@ -131,7 +120,7 @@ call dein#add('scrooloose/nerdtree')
 
 （他に `source` するという手もあります。今回は説明しません。）
 
-# ファイラの用意
+# ファイラの設定
 
 前項の例でインストールしたNERDTreeの使い方を紹介します。ファイル操作までできるようになればだいぶ自由度高まると思うので。
 
