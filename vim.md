@@ -31,7 +31,7 @@ Windowsなら `gvim.exe` 、Macなら `MacVim.app` で起動。
 
 それぞれ "vimrc" が最初に読み込まれ、 "gvimrc" はGUI（アプリ単独）で起動した場合その次に読み込まれます。
 
-:::note warn
+::: warn
 SpaceVimをインストールする場合、SpaceVimのディレクトリで設定ファイルを構築するので
 Vimのインストールディレクトリにあるvimrc、gvimrcは削除する。
 :::
