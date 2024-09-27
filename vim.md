@@ -9,11 +9,6 @@
 
 WindowsとMacの環境でそれぞれインストールするファイルが違う。
 
-- WindowsのVim
-- MacのVim
-- NeoVim
-- IDEのプラグインとしてのVim
-
 WindowsもMacもGUIを利用する。WindowsはGVim、MacはMacVim。（Vim本体とは別）
 
 - Windows: [GVim](https://www.vim.org/download.php#pc)
