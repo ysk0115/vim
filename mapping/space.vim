@@ -38,8 +38,8 @@ function! SpaceVim#mapping#space#init() abort
     return
   endif
 
-"▽2023/12/11 Startifyに戻るキーマッピングを追加
-  call SpaceVim#custom#SPC('nnoremap', ['[SPC]'], 'call SpaceVim#welcome()', 'Startify', 1)
+"▽2024/10/04 vimgrep後の動作を調整
+  call SpaceVim#custom#SPC('nnoremap', ['<Right>'], ':cn', 'cnext', 1)
  
 "▽2023/12/11 メモリ解放CMDを起動するキーマッピングを追加
   call SpaceVim#custom#SPC('nnoremap', ['R'], '!start C:\Users\y-nishiguchi\sys\02_Utilitytool\メモリ解放.bat', 'MemoryRelease', 1)
