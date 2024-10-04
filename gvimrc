@@ -33,6 +33,8 @@ set diffopt+=vertical
 set notitle
 " ツールバーの表示
 set guioptions+=m
+" Vimを半透明化
+autocmd VimEnter * VimTweakSetAlpha 245
 "---------------------------------------------------------------------------
 " ディレクトリツリーに関する設定:
 
