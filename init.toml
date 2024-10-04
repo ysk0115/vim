@@ -110,3 +110,6 @@
 
 [[custom_plugins]]
   name = 'nathanaelkane/vim-indent-guides'
+
+[[custom_plugins]]
+  name = 'mattn/vimtweak'
