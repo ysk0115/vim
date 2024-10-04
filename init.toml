@@ -97,7 +97,7 @@
 [[layers]]
   name = 'lang#python'
 
-# ----------Enable plugins----------
+# ---------Enable plugins---------
 [[custom_plugins]]
   name = 'mattn/webapi-vim'
 
