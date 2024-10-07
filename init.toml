@@ -37,7 +37,7 @@
     # フォント(default: Empty)
     guifont = "SauceCodePro Nerd Font Mono:h12"
     # vimホームで表示するファイルの数(default: 6) 
-    home_files_number = 6
+    home_files_number = 5
 
 # ----------Enable layer----------
 [[layers]]
